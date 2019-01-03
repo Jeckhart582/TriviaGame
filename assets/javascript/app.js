@@ -34,12 +34,46 @@ $(document).ready(function () {
             questionAnswer: 2
         },
         {
-            question: "This Goddess was is know for granting bountiful harvests and plenty of grains?",
+            question: "Which Goddess was is know for granting bountiful harvests and plenty of grains?",
             questionOptions: ["Hepastus", "Athena", "Demeter", "Aphrodite", "Hera"],
             questionAnswer: 2
+        },
+        {
+            question: "Which mythological creature was a combination of a lion, snake and eagle?",
+            questionOptions: ["Chimera", "Griffin", "Hippogriff", "Hydra", "Satyr"],
+            questionAnswer: 0
+        },
+        {
+            question: "This creature is known in Norse Mythology as the 'World-Serpent'",
+            questionOptions: ["Jormungandr", "Jotunn", "Kraken", "Troll", "Warg"],
+            questionAnswer: 0
         }
 
+
     ];
+
+    var timer = 90;
+    var running = false;
+    var pick;
+    var index;
+    var correctAnswers = 0;
+    var incorrectAnswer = 0;
+
+    function decrement() {
+        $("#timerDown").html(timer);
+        timer--;
+
+        if (timer === 0) {
+            stop();
+        }
+    }
+
+    function timerRun() {
+        if (!running) {
+            intervalId = setInterval(decrement, 1000);
+            running = true;
+        }
+    };
 
     function questionFunction() {
         index = Math.floor(Math.random() * choice.length);
@@ -47,7 +81,7 @@ $(document).ready(function () {
         $(".question").html("<h2>" + pick.question + "</h2>");
         for (var i = 0; i < pick.questionOptions.length; i++) {
             var userGuess = $("<button>");
-            userGuess.addClass("answerchoice");
+            userGuess.addClass("answerChoice");
             userGuess.html(pick.questionOptions[i]);
             userGuess.attr("data-guess", i);
             $(".answers1").append(userGuess)
@@ -55,17 +89,36 @@ $(document).ready(function () {
 
     }
 
-    // function questionFunction2() {
-    //     $(".question2").html(question.question2)
-    //     for (i = 0; i < question.question2Answers.length; i++) {
-    //         var answerBox = $("<button>")
-    //         answerBox.addClass("letter-button letter letter-button-color");
-    //         answerBox.text(question.question2Answers[i]);
-    //         $(".answers2").append(answerBox);
-    //     }
-    // }
+    function questionFunction2() {
+        index = Math.floor(Math.random() * choice.length);
+        pick = choice[index];
+        $(".question2").html("<h2>" + pick.question + "</h2>");
+        for (var i = 0; i < pick.questionOptions.length; i++) {
+            var userGuess = $("<button>");
+            userGuess.addClass("answerChoice");
+            userGuess.html(pick.questionOptions[i]);
+            userGuess.attr("data-guess", i);
+            $(".answers2").append(userGuess)
+        }
+
+    }
 
     questionFunction();
+    questionFunction2();
+
+    // $(".answerChoice").on("click", function () {
+    //     userGuess = parseInt($(this).attr("data-guess"));
+    //     console.log(userGuess)
+    //     if (userGuess === pick.questionAnswer) {
+    //         correctAnswers++;
+    //         console.log(correctAnswers)
+
+    //     }
+    // }
+    // );
+
+    timerRun();
+    decrement();
 
 
 });

@@ -1,0 +1,46 @@
+h1 {
+    background : lightblue;
+    text-align: center;
+    padding: 25px;
+    margin-top: 10px;
+    border: outset;
+}
+
+ h2 {
+    text-align: center;
+}
+
+.question {
+    margin-top: 20px;
+    background: lightcoral;
+    padding: 20px;
+    border: solid;
+    margin-bottom: 20px;
+}
+
+.question2 {
+    margin-top: 20px;
+    background: lightcoral;
+    padding: 20px;
+    border: solid;
+    margin-bottom: 20px;
+}
+
+.answers1{
+    text-align: center;
+    
+}
+
+button{
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    background: green;
+
+
+}
+
+#timerDown{
+    font-size: 30px;
+    text-align: center;
+}
