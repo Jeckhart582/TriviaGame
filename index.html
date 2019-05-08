@@ -1,48 +1,56 @@
+    
 <!DOCTYPE html>
-
-<head>
-    <meta charset="utf-8" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trivia Games</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-</head>
+    <title>Trivia Game</title>
 
-<body>
-    <container>
-        <div class="jumbotron">
-            <h1>
-                No Gods or Kings, only Trivia!
-            </h1>
-            <div id="timerDown">
-                Timer Goes Here
-            </div>
-    </container>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+  </head>
+
+  <body>
    
-    <div class = "container">
-        <div class="container questions">
-            <div class="row question">
-                Question 1 Goes Here
-            </div>
-
-            <div class="row answers1">
-
-            </div>
-
-            <div class="row question2">
-
-            </div>
-            <div class="row answers2">
-
-            </div>
+    <div class="container">
+      <div class="header text-center clearfix">
+        <h1 class="text-muted">Do You Know Your Mythology?</h1>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <div id="game">
+          <h2>Mythology Quiz</h2>
+          <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span></p>
+          <p id="question" class="lead"></p>
         </div>
-    </container>
+        <div id="results">
+        </div>
+      </div>
 
-</body>
-<script src="assets/javascript/app.js"></script>
+      <div class="row">
+        <div id="choices" class="text-center">
+          <button id="start" class="btn btn-info btn-lg">Start Game</button>
+          <div id="options">
+            
+          </div>
+          
+        </div>
+      </div>
 
+    </div>
+
+    <!-- jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- TRIVIA APP JS -->
+    <script src="./assets/javascript/app.js"></script>  
+
+
+  </body>
 </html>
