@@ -18,28 +18,28 @@ $(document).ready(function(){
       q1: 'Who is the Greek God of War',
       q2: 'Which Norse God is known for having two faces?',
       q3: 'This Egyptian God has a head of a dog',
-      q4: '',
-      q5: "",
-      q6: '',
-      q7: ""
+      q4: 'How many children did Zeus have?',
+      q5: "Which hit video game was based on Greek Mythology?",
+      q6: 'Which son of Zeus got a animated Disney movie?',
+      q7: "Which Norse God was the main antagonist in The Avengers?"
     },
     options: {
       q1: ['Ares', 'Zeus', 'Hephastus', 'Steve'],
       q2: ['Odin', 'Thor', 'Hela', 'Loki'],
-      q3: ['Set', 'Anubis', 'Faye', ''],
-      q4: ['3', '8', '11', '6'],
-      q5: ['Rachel','Phoebe','Emily','Carol'],
-      q6: ['Joey','Chandler','Rachel','Ross'],
-      q7: ['Ross', 'Phoebe', 'Monica','Chandler']
+      q3: ['Set', 'Anubis', 'Faye', 'Ra'],
+      q4: ['23', '8', '11', '6'],
+      q5: ['Halo','God of War','Call of Duty','Dead Space'],
+      q6: ['Hercules','Dionysus','Hermes','Apollo'],
+      q7: ['Thor', 'Odin', 'Loki','Jorgummander']
     },
     answers: {
       q1: 'Ares',
       q2: 'Hela',
       q3: 'Anubis',
-      q4: '11',
-      q5: 'Rachel',
-      q6: 'Chandler',
-      q7: 'Phoebe'
+      q4: '23',
+      q5: 'God of War',
+      q6: 'Hercules',
+      q7: 'Loki'
     },
     startGame: function(){
       trivia.currentSet = 0;
